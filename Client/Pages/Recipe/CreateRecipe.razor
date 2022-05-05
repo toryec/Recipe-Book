@@ -1,0 +1,13 @@
+@page "/createrecipe"
+
+<RecipeForm RecipeDto="recipe" HandleValidSubmit ="SaveAsync" />
+
+<div class="row">
+        <div class="col-md-4">
+            <div class="form-group" style="padding-top: 25px;">
+            <button type="submit" class="btn btn-danger" @onclick="Cancel">Cancel</button>
+            </div>    
+        </div>
+    </div>
+
+ 

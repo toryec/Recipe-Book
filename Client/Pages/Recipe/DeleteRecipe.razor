@@ -1,0 +1,60 @@
+@page "/deleterecipe/{Id:long}"
+
+@if (recipeToDelete is not null)
+{
+<div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Recipe Name</th>
+                    <th>Author</th>
+                    <th>Item Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@recipeToDelete.RecipeName</td>
+                    <td>@recipeToDelete.Author</td>
+
+                    <td>
+                        @foreach (var ingredient in recipeToDelete.Ingredients)
+                        {  
+                            <tr>
+                                <td>@ingredient.ItemAmount</td>
+                            </tr> 
+                            
+                        }
+                    </td>
+                    <td>
+                        @foreach(var ingredient in recipeToDelete.Ingredients)
+                        {
+                            <tr>
+                                <td class="align-middle">@ingredient.ItemName</td>
+                            </tr>
+                        }
+                    </td>
+                    
+                   
+                </tr>
+            </tbody>
+        </table>   
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group" style="padding-top: 25px;"> 
+            <button class="btn btn-danger" @onclick="Delete">Delete</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group" style="padding-top: 25px;"> 
+             <button type="button" class = "btn btn-secondary" @onclick="Cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+}
+

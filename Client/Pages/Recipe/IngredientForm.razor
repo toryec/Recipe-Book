@@ -1,0 +1,33 @@
+<EditForm Model="IngredientDto" OnValidSubmit="OnSave">
+    @* <DataAnnotationsValidator /> *@
+    <FluentValidationValidator />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Item Name">Item Name</label>
+                <InputText class="form-control" @bind-Value="IngredientDto.ItemName"/>
+                <ValidationMessage For="(() => IngredientDto.ItemName)"/>     
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Item Amount">Item Amount</label>
+                <InputText class="form-control" @bind-Value="IngredientDto.ItemAmount"/>
+                <ValidationMessage For="(() => IngredientDto.ItemAmount)"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group" style="padding-top: 25px;">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+            </div>    
+        </div>
+    </div>
+</EditForm>
+
+
+
+

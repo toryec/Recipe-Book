@@ -1,0 +1,23 @@
+@page "/recipelist"
+
+<PageTitle>Recipe Info</PageTitle>
+
+<div class="row">
+    <div class="col-md-10">
+        @*sort things*@
+    </div>
+    <div class="col-md-2">
+        <a href="/createrecipe" class="btn btn-primary" role="button" style="margin-bottom: 15px;">Create Recipe</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col"> 
+       <RecipeTable Recipes="recipeList"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        @*Pagination*@
+    </div>
+</div>
+

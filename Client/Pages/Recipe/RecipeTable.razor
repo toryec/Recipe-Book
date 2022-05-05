@@ -1,0 +1,34 @@
+@if(Recipes is null)
+{
+    <p>Loading...</p>
+}
+else{ 
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name Of Recipe</th>
+                <th scope="col">Author</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var recipe in Recipes)
+            {
+                <tr>
+                    <td class="align-middle"></td>
+                    <td class="align-middle">@recipe.RecipeName</td>
+                
+                    <td class="align-middle">@recipe.Author</td>
+                    <td class="algin-middle"> 
+                        <a href="/updaterecipe/@recipe.Id" class="btn btn-primary" role="button">Update</a>
+                    </td>
+                    <td class="algin-middle"> 
+                        <a href="/deleterecipe/@recipe.Id" class="btn btn-danger" role="button">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,12 @@
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\bin\Debug\net6.0\BlazorApp.Shared.deps.json
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\bin\Debug\net6.0\BlazorApp.Shared.dll
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\bin\Debug\net6.0\ref\BlazorApp.Shared.dll
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\bin\Debug\net6.0\BlazorApp.Shared.pdb
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.csproj.AssemblyReference.cache
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.AssemblyInfoInputs.cache
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.AssemblyInfo.cs
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.dll
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\ref\BlazorApp.Shared.dll
+C:\Users\josep\documents\blazorapp\blazorapp\Shared\obj\Debug\net6.0\BlazorApp.Shared.pdb

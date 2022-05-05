@@ -1,0 +1,77 @@
+<EditForm Model="RecipeDto" OnValidSubmit="HandleValidSubmit"> 
+    <FluentValidationValidator />
+    
+    @* <DataAnnotationsValidator /> <ValidationSummary /> *@
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Recipe Name">Recipe Name</label>
+                <InputText class="form-control" @bind-Value="RecipeDto.RecipeName" /> 
+                <ValidationMessage For="(() => RecipeDto.RecipeName)" />         
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Author">Author Name</label>
+                <InputText class="form-control" @bind-Value="RecipeDto.Author" /> 
+                <ValidationMessage For="(() => RecipeDto.Author)" />           
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" >
+        <div class="col-md-8" style="padding-top: 25px;">
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Item Amount</th>
+                        <th scope="col">Update Ingredient</th>
+                        <th scope="col">Delete Ingredient</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(RecipeDto.Ingredients is null)
+                    {
+                        <p>Add Ingredient</p>
+                    }
+                    else
+                    {
+                       @foreach(var ingredient in RecipeDto.Ingredients)
+                        {
+                            <tr>
+                                <td class="align-middle"></td>
+                                <td class="align-middle">@ingredient.ItemName</td>
+                                <td class="align-middle">@ingredient.ItemAmount</td>
+                                <td>
+                                    <button type="button" class="btn btn-secondary" @onclick="() => Update(ingredient)" disabled="@disable">Update</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-secondary" @onclick="() => Delete(ingredient)" disabled="@disable">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    }  
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary" disabled="@disable">Save Recipe</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="addIngredientButton">Add Ingredients</label>
+                <button type="button" class="btn btn-primary" @onclick="AddIngredient" disabled="@disable"> Add</button>
+            </div>
+        </div>
+    </div>
+    <br />
+    
+    @if(ingredient is not null)
+    {     
+        <IngredientForm IngredientDto="ingredient" HandleValidSubmit="OnIngredientFormComplete"/> 
+    }
+</EditForm>
+

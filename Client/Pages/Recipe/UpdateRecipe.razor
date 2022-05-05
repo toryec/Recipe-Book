@@ -1,0 +1,7 @@
+@page "/updaterecipe/{Id:long}"
+
+@if(recipeToUpdate is not null)
+{
+    <RecipeForm RecipeDto="recipeToUpdate" HandleValidSubmit = "UpdateAsync"/>
+
+}
