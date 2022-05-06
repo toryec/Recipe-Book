@@ -5,7 +5,7 @@
 * Obtaining a Copy
   
 # Introduction
-The primary focus of this this project is expand knowkedge of both frontend and backend technologies in the .Net ecosystem. The Recipe-Book Web App is an application designed using blazor WASM (hosted) to assist 
+The primary focus of this this project is expand knowkedge of both frontend and backend technologies in the .Net ecosystem. The Recipe-Book Web App is an application designed using blazor WASM (hosted) and MSSQL to assist in keeping track of a collection of recipes and making them accessible to a range of users. The application implements CRUD functionality and a simple UI. 
 
 # Tech Stack
   SeverSide
